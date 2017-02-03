@@ -20,7 +20,7 @@ Please refer [Documentation](http://airavata.apache.org/learning.html) for more 
 
 The Environment currently setup at AWS is described here,
 
-![EnvWithLoadBalancer.png](https://github.com/airavata-courses/spring17-API-Server/blob/wiki-content/wiki-content/EnvWithLoadBalancer.png)
+![EnvWithLoadBalancer block diagram]({{ site.url }}/images/EnvWithLoadBalancer.png)
 
 There are many parts to this environment setup, lets break them into parts:
 
