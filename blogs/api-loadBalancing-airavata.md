@@ -51,4 +51,4 @@ Gone are the days when balancers were static and needed manual configuration, wi
 
 * Making the software defined environment cloud independent.
 
-[back](./)
+[back]({{ site.url }}/index)
