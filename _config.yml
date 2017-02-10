@@ -8,7 +8,7 @@ permalink: /:title
 
 title: "Anuj Bhandar"
 description: "a true believer of open Internet, this blog is my attempt at giving back to the great open source community."
-baseurl: ""
+baseurl: "/"
 url: "https://anujbhan.github.io" # replace by your site's url
 twitter_username: your-name
 github_username:  anujbhan # (your name)
