@@ -1,5 +1,30 @@
-title: Welcome to my Tech Blog
-description: a true believer of open Internet, this blog is my attempt at giving back to the great open source community.
-show_downloads: false
-google_analytics:
-theme:
+safe: false
+
+# build settings
+markdown: kramdown
+highlighter: rouge
+lsi: false
+permalink: /:title
+
+title: "Anuj Bhandar"
+description: "a true believer of open Internet, this blog is my attempt at giving back to the great open source community."
+baseurl: ""
+url: "http://himsel.me" # replace by your site's url
+twitter_username: your-name
+github_username:  anujbhan # (your name)
+accent: "#f7f7e6" # accent color for blog column
+
+author: "Anuj Bhandar"
+address: "Bloomington, IN - 47408"
+email: "bhandar.anuj@gmail.com"
+
+# google analytics tracking code, please change the value
+g_analytics: ""
+
+# language settings
+isolang: en
+
+# exclude files
+exclude:
+  - LICENSE
+  - README.md

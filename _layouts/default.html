@@ -1,62 +1,52 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
+<!DOCTYPE html>
+<html lang="{{ site.isolang }}" itemscope itemtype="http://schema.org/WebPage">
 
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1 style="color:#006699;">{{ site.title | default: site.github.repository_name }}</h1>
-        <p>Hello, I am <b><em>Anuj Bhandar</em></b>, {{ site.description | default: site.github.project_tagline }}</p>
-        <ul>
-          <li><a href="{{ site.url }}/index"><strong>Blog<br/>Home</strong></a></li>
-          <li><a href="https://www.linkedin.com/in/anuj-bhandar-aaba77aa"><strong>LinkedIn Profile</strong></a></li>
-          <li><a href="{{ site.github.owner_url }}"><strong>GitHub Profile</strong></a></li>
-        </ul>
-        {% if site.github.is_project_page %}
-          <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ github_name }}</small></a></p>
-        {% endif %}
+{% include head.html %}
 
-        {% if site.show_downloads %}
-          <ul>
-            <li><a href="{{ site.github.zip_url }}"><strong>LinkedIn</strong></a></li>
-            <li><a href="{{ site.github.owner_url }}"><strong>GitHub</strong></a></li>
-          </ul>
-        {% endif %}
-      </header>
-      <section>
+<body class="wrap wider">
+	<div class="grid">
+		<div id="/home" class="unit one-third">
+			<div class="grid">
+				<div class="unit whole" id="/home">
+					<h1>{{ site.title }}</h1>
+					<p>{{ site.description }}</p>
+				</div>
+				<div class="unit whole" id="/contact">
+					<a href="https://twitter.com/{{ site.twitter_username }}" class="twitter-icon btn"><i class="icon ion-social-twitter"></i></a>
+					<a href="https://github.com/{{ site.github_username }}" class="github-icon btn"><i class="icon ion-social-github"></i></a>
+					<a href="mailto:{{ site.email }}" class="mail-icon btn"><i class="icon ion-email"></i></a>
+					<a href="feed.xml" class="rss-icon btn"><i class="icon ion-social-rss"></i></a>
+				</div>
+				<div class="unit whole hide-on-mobiles" id="/projects">
+					{% include projects.html %}
+				</div>
+				<div class="unit whole hide-on-mobiles" id="/impressum">
+					{% include imprint.html %}
+				</div>
+			</div>
+		</div>
+		<div class="unit two-thirds blog-column">
+			<div class="grid">
+				<div class="unit whole" id="/blog">
+					<h1>Blog</h1>
+				</div>
+				{{ content }}
+				<div class="unit whole" id="/subscribe">
+					<p><a href="feed.xml">RSS</a> & <a href="atom.xml">ATOM</a> Feed<br>Built with Jekyll, Code on <a href="https://github.com/lukas-h/onepage">Github</a></p>
+				</div>
+			</div>
+		</div>
 
-      {{ content }}
+		<div class="unit whole hide-on-desktops" id="/projects">
+			{% include projects.html %}
+		</div>
+		<div class="unit whole hide-on-desktops" id="/impressum">
+			{% include imprint.html %}
+		</div>
+	</div>
 
-      </section>
-      <footer>
-        {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+	{% include foot.html %}
 
+</body>
 
-  {% if site.google_analytics %}
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', '{{ site.google_analytics }}', 'auto');
-        ga('send', 'pageview');
-    </script>
-  {% endif %}
-  </body>
 </html>
