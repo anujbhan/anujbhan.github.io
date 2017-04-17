@@ -7,4 +7,8 @@ author: "Anuj Bhandar"
 ---
 This exercise was done as a part of [Airavata Courses](http://courses.airavata.org/), the motive here is to propose solutions to Airavata's development bottle necks and implement proof of concept to help envision solutions.
 
-This blog describe a Proof of concept for developing a enterprise grade API Load Balancer environment, complete with Infrastructure through SDE, CICD Pipeline and Load balancer setup. [Read More](blogs/API-loadbalance-blog).
+This blog describe a Proof of concept for developing a enterprise grade API Load Balancer environment, complete with Infrastructure through SDE, CICD Pipeline and Load balancer setup.
+
+### Read the Full Blog [Here](blogs/API-loadbalance-blog).
+
+---

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog
 ---
 
 # API Load Balancing with High Availability and Fault Tolerance
